@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'food/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Food App</a>
+
+    <div class="navbar">
+
+        <a href="{% url 'food:create_item' %}" class="nav-item nav-link">Add Item</a>
+        <a href="#" class="nav-item nav-link">Delete Item</a>
+        <a href="#" class="nav-item nav-link">View Item</a>
+    </div>
+</nav>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} mt-2">
+               {{ message }}
+        </div>
+
+    {% endfor %}
+{% endif %}
+
+{% block body %}
+{% endblock %}
+
+
+<script type="application/ecmascript"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
