@@ -9,9 +9,11 @@
                 <img src="{{ item.item_image }}" height="150px" class="card">
             </div>
             <div class="col-md-4">
+
                 <h3>{{ item.item_name }}</h3>
                 <h5>{{ item.item_desc }}</h5>
                 <h6>${{ item.item_price }}</h6>
+                <h6>this is created by: <b>{{ item.user_name }}</b></h6>
             </div>
             <div class="col-md-2">
                 <a href="{% url 'food:detail' item.id %}" type="button" class="btn btn-success">Details</a>
