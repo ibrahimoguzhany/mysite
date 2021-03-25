@@ -132,3 +132,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'food:index'
+LOGIN_URL = 'login'
+# DJANGO_SETTINGS_MODULE = 'mysite.settings'
